@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+ <script type="text/javascript" src="scripts.js"></script>
+<title>Testinis ka zn</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all',
+                                              'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+<div id ="battleContainer">
+    <div id ="main">  
+		<div id ="mainHit"></div>
+		<progress id="mainHealth" value="100" max="100"></progress>
+		<%= link_to image_tag("main.jpg", alt: "picolo"),
+            'http://rubyonrails.org/' %>
+
+	</div>
+	
+	<div id ="enemy">
+		<div id ="enemyHit"></div>
+			<%= link_to image_tag("piccolo.png", alt: "picolo"),
+            'http://rubyonrails.org/' %>
+<progress id="enemyHealth" value="100" max="100"></progress>
+	</div>
+</div>
+
+<p>
+<button id="button" onclick="myMove()">Kovoti</button> 
+</p>
+
+<p id="won">
+</p>
+
+
+</body>
+</html>
